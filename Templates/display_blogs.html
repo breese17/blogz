@@ -1,18 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Build a Blog</h1>
+<h1>All Blogs!</h1>
 <form action='/blog', method='get'></form>
     
-    {% for blog in blog_list%}
+    {% for blog in listing%}
         
     
-    <li><a href="/single?id={{blog.id}}">{{ blog.titles }}</a>  
+    <li><a href="/new?id={{blog.id}}">{{ blog.titles }}</a>  
         <br>
-        {{blog.body}} </li>
-        <h2>
-            
-        </h2>
+        {{blog.body}} <br>
+        <p>writtenby<a href="/user?id={{blog.owner.id}}"> {{blog.owner.username}}</a></p> </li>
+        
         
 
     {% endfor%}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<form action='/user', method='post'></form>
+
+<h1>Add a Blog to your Page!</h1>
+    {% for blog in user_blogs %}
+   
+
+        <li><a href="/new?id={{blog.id}}">{{ blog.titles }}</a>  
+            <br>
+                {{blog.body}} </li>
+
+
+    
+    {% endfor %}
+
+
+
+
+
+
+{% endblock %}

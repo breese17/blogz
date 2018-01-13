@@ -1,20 +1,25 @@
 <!doctype html>
 <html>
     <head>
-        <title>
             <style>
-                .error{
-                    color:red;
-                }
-            </style>
+                    .error{
+                        color:red;
+                    }
+                </style>
+        <title>
+           
 
         </title>
     </head>
     <body>
             <nav>
-                    <a href="/blog">Main Blog Page</a> |
+                    <a href="/">Main Page</a> |
+                    <a href="/blog">All Blogs Page</a> |
                     <a href="/newpost">Add Blog Entry</a> |
-                   
+
+                    <a href="/login"> Login</a>
+                    <a href="/logout"></style>Logout</a>
+
                     </nav>
         {% with messages = get_flashed_messages(with_categories=True) %}
             <ul>
