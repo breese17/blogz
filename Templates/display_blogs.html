@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Build a Blog</h1>
+<form action='/blog', method='get'></form>
+    
+    {% for blog in blog_list%}
+        
+    
+    <li><a href="/single?id={{blog.id}}">{{ blog.titles }}</a>  
+        <br>
+        {{blog.body}} </li>
+        <h2>
+            
+        </h2>
+        
+
+    {% endfor%}
+
+   
+{% endblock %}

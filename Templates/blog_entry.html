@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Add New Blog Entry</h1>
+<form action='/newpost', method='post'>
+    <label>
+        Create a title for your blog:
+        <input type="text" name='titles' />
+    </label><br>
+    <br>
+    
+        Add your blog content below:<br>
+        <textarea rows="4" cols="50" id="body_field" name='body' form'usrform'></textarea>
+    <br>
+    <input type="submit" value='Add entry' />
+</form>
+
+
+{% endblock %}
